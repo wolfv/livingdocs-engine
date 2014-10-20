@@ -36,7 +36,7 @@ module.exports = class Design
 
 
   # pass the template as object
-  # e.g add({id: "title", name:"Title", html: "<h1 doc-editable>Title</h1>"})
+  # e.g add({id: "title", name:"Title", html: "<h1 doc-editable>Title</h1>", directives: {} })
   add: (templateDefinition, styles) ->
     @templateDefinitions[templateDefinition.id] = undefined
     templateOnlyStyles = @createDesignStyleCollection(templateDefinition.styles)
@@ -49,6 +49,7 @@ module.exports = class Design
       styles: templateStyles
       html: templateDefinition.html
       weight: templateDefinition.weight || 0
+      directives: templateDefinition.directives
 
     @templates.push(template)
     template

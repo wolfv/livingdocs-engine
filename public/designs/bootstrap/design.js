@@ -43,6 +43,22 @@
       ]
     },
     {
+      "id": "cover",
+      "title": "Cover",
+      "directives": {
+        "image": {
+          "crop": [
+            {
+              "ratio": "16/9",
+              "label": "16:9",
+              "name": "wide"
+            }
+          ]
+        }
+      },
+      "html": "<div>\n  <h4 doc-editable=\"title\">Titel</h4>\n  <div doc-image=\"image\" style=\"background-image:url();\">\n    <h3 doc-editable=\"uppertitle\">Oberzeile</h3>\n    <h2 doc-editable=\"maintitle\">Titel</h2>\n  </div>\n</div>"
+    },
+    {
       "title": "Large Button",
       "id": "largeButton",
       "html": "<div><hr></div>"

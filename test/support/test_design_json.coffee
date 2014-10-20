@@ -102,6 +102,13 @@ module.exports = do ->
     ,
       id: 'cover'
       title: 'Cover'
+      directives:
+        image:
+          crop: [
+            ratio: "16/9"
+            label: "16:9"
+            name: "wide"
+          ]
       html:
         """
         <div>
