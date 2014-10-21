@@ -33,9 +33,7 @@ module.exports = class Template
     @styles = styles || {}
     @weight = weight
     @defaults = {}
-    @config =
-      directives: directives || {}
-
+    @options = directives: directives || {}
     @parseTemplate()
 
 
@@ -90,7 +88,7 @@ module.exports = class Template
     while elem = iterator.nextElement()
       directive = directiveCompiler.parse(elem)
       if directive
-        directive.setConfig(@config.directives[directive.name])
+        directive.setOptions(@options.directives[directive.name])
         directives.add(directive)
 
     directives
